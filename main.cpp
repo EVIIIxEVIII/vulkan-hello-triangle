@@ -42,7 +42,7 @@ const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
 
 const std::string MODEL_PATH = "./models/viking_room.obj";
-const std::string TEXTURE_PATH = "./textures/viking_room.png";
+const std::string TEXTURE_PATH = "./textures/texture.jpg";
 
 const std::vector<const char*> validationLayers = {
     "VK_LAYER_KHRONOS_validation"
@@ -94,7 +94,6 @@ struct UniformBufferObject {
     alignas(16) glm::mat4 view;
     alignas(16) glm::mat4 proj;
 };
-
 
 struct Vertex {
     glm::vec3 pos;
@@ -152,7 +151,6 @@ namespace std {
         }
     };
 }
-
 
 class HelloTriangleApplication {
 public:
@@ -251,28 +249,35 @@ private:
         createInstance();
         setupDebugMessenger();
         createSurface();
+
         pickPhysicalDevice();
         createLogicalDevice();
+
         createSwapChain();
         createImageViews();
         createRenderPass();
+
         createDescriptorSetLayout();
         createGraphicsPipeline();
         createCommandPool();
         createColorResources();
         createDepthResources();
+
         createFrameBuffers();
         createTextureImage();
         createTextureImageView();
         createTextureSampler();
 
         loadModel();
+
         createVertexBuffer();
         createIndexBuffer();
         createUniformBuffers();
+
         createDescriptorPool();
         createDescriptorSets();
         createCommandBuffers();
+
         createSyncObjects();
     }
 
@@ -1676,7 +1681,6 @@ private:
         VkFenceCreateInfo fenceInfo{};
         fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
         fenceInfo.flags = VK_FENCE_CREATE_SIGNALED_BIT;
-
 
         for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
             if (

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/VulkanApp.dir/src/main.cpp.o -o VulkanApp  /usr/lib/x86_64-linux-gnu/libvulkan.so -lglfw 

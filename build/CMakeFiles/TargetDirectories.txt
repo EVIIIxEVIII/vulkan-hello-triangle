@@ -1,0 +1,3 @@
+/home/alderson/Projects/Mine/hello-triangle/build/CMakeFiles/VulkanApp.dir
+/home/alderson/Projects/Mine/hello-triangle/build/CMakeFiles/edit_cache.dir
+/home/alderson/Projects/Mine/hello-triangle/build/CMakeFiles/rebuild_cache.dir
